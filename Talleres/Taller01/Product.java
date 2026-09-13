@@ -9,25 +9,40 @@ public class Product {
         setStock(stock);
         setPrice(price);
     }
-    public void setName(String name){
-        if (name != null){
+    public boolean setName(String name){
+        if (name != null && !name.isEmpty()){
             this.name = name;
+            return true;
         } else {
             System.out.println("Error: El nombre no puede estar vacio");
+            return false;
         }
     }
-    public void setStock(int stock){
+    public boolean setStock(int stock){
         if (stock >= 0) {
             this.stock = stock;
+            return true;
         } else {
             System.out.println("Error: El valor no puede ser negativo ");
+            return false;
         }
     }
-    public void  setPrice(double price){
+    public boolean setPrice(double price){
         if (price > 0) {
             this.price = price;
+            return true;
         } else {
             System.out.println("Error: El precio debe ser mayor a 0");
+            return false;
         }
+    }
+    public String getname(){
+        return this.name;
+    }
+    public int getstock(){
+        return this.stock;
+    }
+    public double getprice(){
+        return this.price;
     }
 }
