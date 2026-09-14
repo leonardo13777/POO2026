@@ -23,5 +23,6 @@ public class testProduct {
         System.out.println("El nombre de el producto es: " + product.getname());
         System.out.println("La cantidad en stock es: " + product.getstock() + " cajas");
         System.out.println("El precio del producto es: " + product.getprice() + "$");
+        scanner.close();
     }
 }
