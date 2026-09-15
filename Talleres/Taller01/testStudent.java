@@ -34,37 +34,43 @@ public class testStudent {
         student.setaverage(qualification1Int, qualification2Int, qualification3Int);
         // Cambio de daatos que sean neccesarios
         int validator = 0;
-        while (validator >= 0 && validator <= 4 ) {
+        while (validator >= 0 && validator <= 5 ) {
             System.out.println(" --- INGRESE UNA OPCION --- ");
             System.out.println(" --- Escriba 1 para consultar informaciondel estudiante --- ");
-            System.out.println(" --- Escriba 2 para cambiar la primera nota --- ");
-            System.out.println(" --- Escriba 3 para cambiar la segunda nota --- ");
-            System.out.println(" --- Escriba 4 para cambiar la tercera nota --- ");
-            System.out.println(" --- Escriba cualquier otro numero para terminar diferente a 0,1,2,3,4 --- ");
+            System.out.println(" --- Escriba 2 para cambiar el nombre del estudiante --- ");
+            System.out.println(" --- Escriba 3 para cambiar la primera nota --- ");
+            System.out.println(" --- Escriba 4 para cambiar la segunda nota --- ");
+            System.out.println(" --- Escriba 5 para cambiar la tercera nota --- ");
+            System.out.println(" --- Escriba cualquier otro numero para terminar diferente a 0, 1, 2, 3, 4, 5 --- ");
             validator = scanner.nextInt();
-            
+            scanner.nextLine();
             if ( validator == 1 ){
                 System.out.println(" --- El nombre del estudiante es: " + student.getnameStudent()  + " --- ");
                 System.out.println(" --- La primera nota es:" + student.getqualification1() + " --- ");
                 System.out.println(" --- La segunda nota es: " + student.getqualification2() + " --- ");
                 System.out.println(" --- La tercera nota es: " + student.getqualification3() + " --- ");
                 System.out.println(" --- El promedio de el estudiante es: " + student.getaverage() + " ---" );
-            } else if ( validator == 2 ) {
+            } else if (validator == 2) {
+                System.out.println("Ingrese el nuevo nombre: ");
+                nameStudentInput = scanner.nextLine();
+                student.setnameStudent(nameStudentInput);
+            } else if ( validator == 3 ) {
                 System.out.println(" --- Ingrese la nueva nota ---");
                 qualification1Int = scanner.nextDouble();
                 student.setqualification1(qualification1Int);
                 student.setaverage(qualification1Int, qualification2Int, qualification3Int);;
-            } else if ( validator == 3 ) {
+            } else if ( validator == 4 ) {
                 System.out.println(" --- Ingrese la nueva nota--- ");
                 qualification2Int = scanner.nextInt();
                 student.setqualification2(qualification2Int);
                 student.setaverage(qualification1Int, qualification2Int, qualification3Int);;
-            } else if ( validator == 4 ) {
+            } else if ( validator == 5 ) {
                 System.out.println(" --- Ingrese la nueva nota --- ");
                 qualification3Int = scanner.nextInt();
                 student.setqualification3(qualification3Int);
                 student.setaverage(qualification1Int, qualification2Int, qualification3Int);
                 }
         }
+    scanner.close();
     }
 }
