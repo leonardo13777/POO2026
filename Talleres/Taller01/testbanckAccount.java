@@ -61,8 +61,9 @@ public class testbanckAccount {
             } else if ( condition == 3){
                 break;
             }
-            System.out.print("Quiere seguir con el deposito o retiro? pon 1 para SI o 2 para No");
+            System.out.print("Quiere seguir con el deposito o retiro? pon 1 para SI o 2 para No: ");
             validator = scanner.nextInt();
         }
+        scanner.close();
     }
 }
