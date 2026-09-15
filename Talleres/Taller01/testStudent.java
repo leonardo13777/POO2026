@@ -9,26 +9,41 @@ public class testStudent {
         do {
             System.out.print("Ingrese el nombre del estudiante: ");
             nameStudentInput = scanner.nextLine();
+            if (student.setnameStudent(nameStudentInput)) {
+                System.out.println(" --- El nombre no es valido, vuelva a intentarlo --- ");
+            }
         } while (!student.setnameStudent(nameStudentInput));
         int studentIdInout;
         do {
             System.out.print("Ingrese el id del estudiante: ");
             studentIdInout = scanner.nextInt();
+            if (student.setstudentId(studentIdInout)) {
+                System.out.println(" --- El numero no es valido, vuelva a intentarlo --- ");
+            }
         } while (!student.setstudentId(studentIdInout));
         double qualification1Int;
         do {
             System.out.print("Ingrese la primera calificacion: ");
             qualification1Int = scanner.nextDouble();
+            if (student.setqualification1(qualification1Int)) {
+                System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
+            }
         } while (!student.setqualification1(qualification1Int));
         double qualification2Int;
         do {
             System.out.print("Ingrese la segunda calificacion: ");
             qualification2Int = scanner.nextDouble();
+            if (student.setqualification2(qualification2Int)) {
+                System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
+            }
         } while (!student.setqualification2(qualification2Int));
         double qualification3Int;
         do {
             System.out.print("Ingrese la tercera calificacion: ");
             qualification3Int = scanner.nextDouble();
+            if (student.setqualification3(qualification3Int)) {
+                System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
+            }
         } while (!student.setqualification3(qualification3Int));
         System.out.println(" ---- Estudiante registrado con exito --- ");
         student.setaverage(qualification1Int, qualification2Int, qualification3Int);

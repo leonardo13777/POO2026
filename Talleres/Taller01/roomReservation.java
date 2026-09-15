@@ -16,7 +16,6 @@ public class roomReservation {
             this.nameGuest = nameGuest;
             return true;
         } else {
-            System.out.println("El nombre no es valido Intentalo de nuevo");
             return false;
         }
     }
@@ -25,7 +24,6 @@ public class roomReservation {
             this.roomNumber = roomNumber;
             return true;
         } else {
-            System.out.println("El numero de habitacion es invalido");
             return false;
         }
     }
@@ -34,7 +32,6 @@ public class roomReservation {
             this.numberNigth = numberNigth;
             return true;
         } else {
-            System.out.println("El numero de noches es invalido");
             return false;
         }
     }
@@ -43,7 +40,6 @@ public class roomReservation {
             this.priceNigth = priceNigth;
             return  true;
         } else {
-            System.out.println("El precio de la noche es invalido");
             return false;
         }
     }

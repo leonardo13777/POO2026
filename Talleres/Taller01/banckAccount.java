@@ -13,7 +13,6 @@ public class banckAccount {
             this.nameHolder = nameHolder;
             return true;
         } else {
-            System.out.println("El nombre de la persona es invalido, intentelo nuevamente: ");
             return false;
         }
     }
@@ -22,7 +21,6 @@ public class banckAccount {
             this.numberAccount = numberAccount;
             return true;
         } else {
-            System.out.println("El numero es invalido");
             return false;
         }
     }
@@ -31,7 +29,6 @@ public class banckAccount {
             this.balance = balance;
             return true;
         } else {
-            System.out.println("El saldo no puede ser negativo");
             return false;
         } 
     }
@@ -40,7 +37,6 @@ public class banckAccount {
             this.balance = balance - extract;
             return true;
         } else {
-            System.out.println("No es posible retirar ese monto");
             return false;
         }
     }
@@ -49,7 +45,6 @@ public class banckAccount {
             this.balance = balance + worthAdd;
             return true;
         } else {
-            System.out.println("El valor a depositar es invalido");
             return false;
         }
     }

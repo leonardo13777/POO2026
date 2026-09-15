@@ -9,21 +9,33 @@ public class testroomReservation {
         do {
             System.out.print("Escriba el nombre de la persona que reservo: ");
             nameInput = scaner.nextLine();
+            if (roomReservation.setnameGuest(nameInput) == false) {
+                System.out.println("El nombre no es valido Intentalo de nuevo");
+            }
         } while (!roomReservation.setnameGuest(nameInput));
         int numberRoomInput;
         do {
             System.out.print("Escriba el numero de la habitacion a reservar: ");
             numberRoomInput = scaner.nextInt();
+            if (roomReservation.setroomNumber(numberRoomInput)) {
+                System.out.println("El numero de habitacion es invalido");
+            }
         } while (!roomReservation.setroomNumber(numberRoomInput));
         int numberNigthInput;
         do {
             System.out.print("Ingrese el numero de noches a reservar: ");
             numberNigthInput = scaner.nextInt();
+            if (roomReservation.setnumberNigth(numberNigthInput)) {
+                System.out.println("El numero de noches es invalido");
+            }
         } while (!roomReservation.setnumberNigth(numberNigthInput));
         double priceNigthInput;
         do {
             System.out.print("Ingrese el precio por noche: ");
             priceNigthInput = scaner.nextDouble();
+            if (roomReservation.setpriceNigth(priceNigthInput)) {
+                System.out.println("El precio de la noche es invalido");
+            }
         } while (!roomReservation.setpriceNigth(priceNigthInput));
         //Calcular el costo total de la reservacion
         roomReservation.settotalPrice(priceNigthInput, numberNigthInput);

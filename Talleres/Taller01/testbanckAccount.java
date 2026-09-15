@@ -11,18 +11,27 @@ public class testbanckAccount {
         do {
             System.out.print("Ingrese su nombre completo: ");
             nameImput = scanner.next();
+            if(banckAccount.setnameHolder(nameImput) == false){
+                System.out.println("El nombre de la persona es invalido, intentelo nuevamente: ");
+            }
         } while (!banckAccount.setnameHolder(nameImput));
         scanner.nextLine();
         int numberAccountInput;
         do {
             System.out.print("Ingrese el numero de cuenta de 5 números: ");
             numberAccountInput = scanner.nextInt();
+            if (banckAccount.setnumberAccount(numberAccountInput) == false){
+                System.out.println("El numero es invalido");
+            }
         } while (!banckAccount.setnumberAccount(numberAccountInput));
         scanner.nextLine();
         double balanceInput;
         do {
             System.out.print("Escribe el saldo de su cuenta: ");
             balanceInput = scanner.nextDouble(); 
+            if (banckAccount.setbalance(balanceInput)){
+                System.out.println("El saldo no puede ser negativo");
+            }
         } while (!banckAccount.setbalance(balanceInput));
 
         System.out.println("La persona titular de la cuenta es: " + banckAccount.getnameholder());
@@ -52,7 +61,7 @@ public class testbanckAccount {
             } else if (condition == 2) {
                 System.out.print("Escriba el valor que quiere retirar: ");
                 extractInput = scanner.nextDouble();
-                if (banckAccount.setwithdraw(extractInput)){
+                if (banckAccount.setwithdraw(extractInput) == true){
                 System.out.println(" --- Retiro Exitoso --- ");
                 System.out.println(" --- Su nuevo saldo: " + banckAccount.getbalance() + " --- ");
                 } else {

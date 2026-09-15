@@ -18,7 +18,6 @@ public class stundet {
             this.nameStudent = nameStudent;
             return true;
         } else {
-            System.out.println(" --- El nombre no es valido, vuelva a intentarlo --- ");
             return false;
         }
     }
@@ -27,7 +26,6 @@ public class stundet {
             this.studentId = studentId;
             return true;
         } else {
-            System.out.println(" --- El numero no es valido, vuelva a intentarlo --- ");
             return false;
         }
     }
@@ -36,7 +34,6 @@ public class stundet {
             this.qualification1 = qualification1;
             return  true;
         } else {
-            System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
             return false;
         }
     }
@@ -45,7 +42,6 @@ public class stundet {
             this.qualification2 = qualification2;
             return  true;
         } else {
-            System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
             return false;
         }
     }
@@ -54,7 +50,6 @@ public class stundet {
             this.qualification3 = qualification3;
             return  true;
         } else {
-            System.out.println(" --- El valor de la nota es invalido, vuelva a intentarlo --- ");
             return false;
         }
     }

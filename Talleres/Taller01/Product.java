@@ -14,7 +14,6 @@ public class Product {
             this.name = name;
             return true;
         } else {
-            System.out.println("Error: El nombre no puede estar vacio");
             return false;
         }
     }
@@ -23,7 +22,6 @@ public class Product {
             this.stock = stock;
             return true;
         } else {
-            System.out.println("Error: El valor no puede ser negativo ");
             return false;
         }
     }
@@ -32,7 +30,6 @@ public class Product {
             this.price = price;
             return true;
         } else {
-            System.out.println("Error: El precio debe ser mayor a 0");
             return false;
         }
     }
