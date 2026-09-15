@@ -23,32 +23,28 @@ public class testMediaPlayer {
                 }
                 System.out.println(" --- El volumen del reproductor es:" + mediaplayer.getvolumen() + " ---");
             } else if ( validator == 2) {
-                if (mediaplayer.getvolumen() < 100) {
-                    mediaplayer.setincrease();
-                    System.out.println(" ---   SE SUBIO EL VOLUMEN CON EXITO ---");
+                if (mediaplayer.setincrease() == true){
+                    System.out.println(" --- SE SUBIO EL VOLUMEN --- ");
                 } else {
-                    System.out.println(" --- NO ES POSIBLE SUBIR MAS EL VOLUMEN ---");
+                    System.out.println(" --- NO ES POSIBLE SUBIR EL VOLUMEN --- ");
                 }
             } else if (validator == 3 ) {
-                if (mediaplayer.getvolumen() > 0 ){
-                    mediaplayer.setdecrease();
-                    System.out.println(" --- SE BAJO EL VOLUMEN CON EXITO ---");
+                if (mediaplayer.setdecrease() == true) {
+                    System.out.println(" --- SE BAJO EL VOLUMEN CON EXITO --- ");
                 } else {
-                    System.out.println(" --- NO ES POSIBLE BAJAR MAS EL VOLUMEN ---");
+                    System.out.println(" --- NO ES POSIBLE BAJAR EL VOLUMEN --- ");
                 }
             } else if (validator == 4) {
-                if (mediaplayer.getplayBackStatee() == false ){
-                    mediaplayer.setplaying();
-                    System.out.println(" --- SE EMPEZO A REPRODDUCIR CON EXITO ---");
+                if (mediaplayer.setplaying() == true ) {
+                    System.out.println(" --- EL REPRODUCTO VOLVIO A REPRODUCIR --- ");
                 } else {
-                    System.out.println(" --- NO ES POSIBLE REALIZAR LA ACCION ---");
+                    System.out.println(" --- EL REPRODUCTO YA ESTA REPRODUCIENDO --- ");
                 }
             } else if (validator == 5 ) {
-                if (mediaplayer.getplayBackStatee() == true ){
-                    mediaplayer.setstopped();
-                    System.out.println(" --- SE PAUSO EL REPRODUCTO CON EXITO ---");
+                if (mediaplayer.setstopped()) {
+                    System.out.println(" --- EL REPRODUCTO SE PAUSO --- ");
                 } else {
-                    System.out.println(" --- NO ES POSIBLE REALIZAR LA ACCION ---");
+                    System.out.println(" --- EL REPRODUCTOR YA ESTA PAUSADO --- ");
                 }
             }
         }

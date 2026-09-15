@@ -9,20 +9,36 @@ public class mediaPlayer {
         setplaying();
         setstopped();
     }
-    public void setincrease(){
+    public boolean setincrease(){
+        if ( this.volumen < 100) {
             this.volumen = volumen + 5;
+            return true;
+        } else {
+            return false;
+        } 
     }
-    public  void setdecrease(){
+    public  boolean setdecrease(){
+        if (this.volumen > 0 ) {
             this.volumen = volumen - 5;
-    }
-    public void setplaying(){
-        if (this.playBackState == false){
-            this.playBackState = true;
+            return true;
+        } else {
+            return false;
         }
     }
-    public void setstopped(){
+    public boolean setplaying(){
+        if (this.playBackState == false){
+            this.playBackState = true;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public boolean setstopped(){
         if (this.playBackState == true){
             this.playBackState = false;
+            return true
+        } else {
+            return false;
         }
     }
     public int getvolumen(){
