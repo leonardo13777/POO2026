@@ -36,9 +36,9 @@ public class testroomReservation {
             System.out.println(" --- Escriba 2 para cambiar el precio por noche --- ");
             System.out.println(" --- Escriba 3 para cambiar el numero de noches --- ");
             System.out.println(" --- Escriba 4 para cambiar el numero de habitacion --- ");
-            System.out.println(" --- Escriba cualquier otro numero para terminar --- ");
+            System.out.println(" --- Escriba cualquier otro numero para terminar diferente a 0,1,2,3,4 --- ");
             validator = scaner.nextInt();
-            //Consulta de informacion
+            //Consulta de informacion y cambio de datos
             if ( validator == 1 ){
                 System.out.println(" --- La reservacion esta a nombre de: " + roomReservation.getnameGuest() + " --- ");
                 System.out.println(" --- La habitacion reservada es la numero: "  + roomReservation.getroomNumber() + " --- ");
@@ -61,6 +61,7 @@ public class testroomReservation {
                 roomReservation.setroomNumber(numberNigthInput);
                 }
             }
+        scaner.close();
         }
         
 }
